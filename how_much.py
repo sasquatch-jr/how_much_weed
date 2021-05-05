@@ -32,7 +32,7 @@ no_pos_md_template = """
 footer_template = """
 </ul>
 <h3>How was this made?</h3>
-Dutchie exposes a bunch of information about menus in a public GraphQL database. This for some reason includes real time stock levels! This is a very basic demo, but one could track all kinds of fun stuff about their competition using this information. Looking to open a dispo near a shop that uses Dutchie? Now you can get real time sales data from the other guys and know if that area is worth your time. Thanks Dutchie!
+<a href="https://github.com/sasquatch-jr/how_much_weed/blob/master/how_much.py">Here's the source code</a>. Dutchie exposes a bunch of information about menus in a public GraphQL database. This for some reason includes real time stock levels! This is a very basic demo, but one could track all kinds of fun stuff about their competition using this information. Looking to open a dispo near a shop that uses Dutchie? Now you can get real time sales data from the other guys and know if that area is worth your time. Thanks Dutchie!
 
 <h3>How do I stop people from getting at my sales data?</h3>
 Stop using Dutchie. In the US <a href='https://www.iheartjane.com/'>Jane</a> seems popular. In Canada <a href='https://buddi.io/'>Buddi</a> seems to have been built by people who actually thought about privacy and security. Note, I have no relationship with either of those companies!
