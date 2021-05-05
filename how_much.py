@@ -65,7 +65,7 @@ ids = {
         'Missoula': None,
         'Las Vegas': None,
         'Tel Aviv': None,
-        'Woodlad Hills': None
+        'Woodland Hills': None
        }
 
 url = """https://dutchie.com/graphql?operationName=FilteredProducts&variables={"productsFilter":{"dispensaryId":"BOOOM","bypassOnlineThresholds":false,"types":["Flower"]},"useCache":true}&extensions={"persistedQuery":{"version":1,"sha256Hash":"66141e1331cbd1cd0ad2dbdbc41000536a3de81e39c265015f88e12610374d8c"}}"""
