@@ -22,7 +22,7 @@ item_template = """
 """
 
 no_dutchie_template = """
-<li>{} does not use Dutchie. Ask Berner to switch so we know how much weed has at this location too!</li>
+<li>{} does not use Dutchie. Ask Berner to switch so we know how much weed is at this location too!</li>
 """
 
 no_pos_md_template = """
