@@ -83,6 +83,9 @@ for store, id in ids.items():
         prod_name = p['Name']
         brand = p['brandName']
         for s in p['POSMetaData']['children']:
-            product_htmls.append(product_template.format(brand, prod_name, s['option'], s['quantity']))
+            quantity = s['quantity']
+            if quantity == 25:
+                quantity = '25+'
+            product_htmls.append(product_template.format(brand, prod_name, s['option'], quantity))
     store_htmls.append(shop_template_head.format(id, store) + ''.join(product_htmls) + shop_template_footer)
 open('douche_love.html', 'w').write(header_template.format(datetime.now()) + ''.join(shop_links) + ''.join(store_htmls) + footer_template)
