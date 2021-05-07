@@ -3,6 +3,7 @@
 # leak your all of your customer's internal sales data and STILL dupe investors into 
 # giving you $200mil to flush down the toilet instead of investing into actual engineering?
 
+import time
 import json
 import urllib
 import requests
@@ -72,10 +73,21 @@ url = """https://dutchie.com/graphql?operationName=FilteredProducts&variables={"
 store_htmls = []
 shop_links = []
 
+def _fetch_menu_retry(url, retries=5):
+    try:
+        menu = requests.get(url)
+        return menu.json()['data']['filteredProducts']['products']
+    except Exception as e:
+        if retries == 0:
+            raise(e)
+
+        time.sleep(5)
+        return _fetch_menu_retry(url, retries=retries-1)
+
 for store, id in ids.items():
     menu_url = url.replace("BOOOM", id)
-    menu = requests.get(menu_url)
-    products = menu.json()['data']['filteredProducts']['products']
+    products = _fetch_menu_retry(menu_url)
+
     shop_links.append(shop_links_template.format(id, store))
     product_htmls = []
 
